@@ -22,21 +22,22 @@ class SkillModel
                 "link" => "/about/knowledge/#javascript",
                 "buttonStyle" => "bg-amber-400 text-black",
             ],
-            [
-                "image" => "/images/react.png",
-                "title" => "React",
-                "description" => "Frontend-Entwicklung mit React.",
-                "link" => "/about/knowledge/#react",
-                "buttonStyle" => "bg-blue-500 text-white",
-            ],
+            
             [
                 "image" => "/images/php.png",
                 "title" => "Laravel",
                 "description" => "Backend-Entwicklung mit Laravel.",
                 "link" => "/about/knowledge/#laravel",
                 "buttonStyle" => "bg-indigo-500 text-white",
-            ]
+            ],
             
+            [
+                "image" => "/images/react.png",
+                "title" => "React",
+                "description" => "Frontend-Entwicklung mit React.",
+                "link" => "/about/knowledge/#react",
+                "buttonStyle" => "bg-blue-500 text-white",
+            ]
         ];
     }
 }

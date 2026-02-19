@@ -2,10 +2,9 @@
 
 class GuestbookController   
 {
-    public function guestbook()
-    {
+    public function guestbook() {
 
-        require __DIR__ . '/../View/layout.php';
 
     }
+
 }

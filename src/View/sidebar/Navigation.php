@@ -3,5 +3,6 @@
     <nav class="nav flex-column">
         <a class="nav-link" href="/?page=home">Startseite</a>
         <a class="nav-link" href="/?page=guestbook">Gästebuch</a>
+        <a class="nav-link" href="/?page=test">Testseite</a>
     </nav>
 </div>

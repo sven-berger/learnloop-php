@@ -1,13 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 require_once __DIR__ . '/../View/ViewRenderer.php';
+require_once __DIR__ . '/TestController.php';
 
 class IndexController
 {
     /**
      * Homepage rendert
      */
-    public function index()
+    public function index(): string
     {
         return renderPage('home', [
             'title' => 'Willkommen bei LearnLoop',
@@ -18,7 +21,7 @@ class IndexController
     /**
      * Gästebuch-Seite rendert
      */
-    public function guestbook()
+    public function guestbook(): string
     {
         // Mock-Daten (später aus Datenbank)
         $guestbookEntries = [
@@ -38,5 +41,11 @@ class IndexController
             'guestbookEntries' => $guestbookEntries,
             'message' => 'Vielen Dank für deinen Eintrag!'
         ]);
+    }
+
+    public function test(): string
+    {
+        $controller = new TestController();
+        return $controller->test();
     }
 }
