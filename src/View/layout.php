@@ -11,18 +11,19 @@ $skillsJson = htmlspecialchars((string) json_encode($skills, JSON_UNESCAPED_UNIC
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LearnLoop</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/react.development.js"></script>
-    <script src="/assets/js/react-dom.development.js"></script>
-
 </head>
 
 <body>
-    <h1 class="text-2xl text-red-600 p-6">Meine Skills</h1>
-    <div id="app" data-skills="<?= $skillsJson ?>"></div>
-    <script src="/assets/js/tailwind.js"></script>
-
-    <script type="text/babel" src="/assets/js/app.js"></script>
+    <main class="container py-4">
+        <h1 class="display-6 text-danger mb-4">Meine Skills</h1>
+        <div id="app" data-skills="<?= $skillsJson ?>"></div>
+    </main>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/react/react.development.js"></script>
+    <script src="/vendor/react/react-dom.development.js"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
