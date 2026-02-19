@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 require_once __DIR__ . '/../View/ViewRenderer.php';
 
 class IndexController
@@ -9,7 +7,7 @@ class IndexController
     /**
      * Homepage rendert
      */
-    public function index(): string
+    public function index()
     {
         return renderPage('home', [
             'title' => 'Willkommen bei LearnLoop',
@@ -20,7 +18,7 @@ class IndexController
     /**
      * Gästebuch-Seite rendert
      */
-    public function guestbook(): string
+    public function guestbook()
     {
         // Mock-Daten (später aus Datenbank)
         $guestbookEntries = [

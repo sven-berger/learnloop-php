@@ -1,8 +1,8 @@
 <?php
 
-class GuestbookController   
+class HomeController   
 {
-    public function guestbook()
+    public function home()
     {
 
         require __DIR__ . '/../View/layout.php';

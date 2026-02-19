@@ -47,7 +47,7 @@ Typische Beispiele:
 
 - Standard ist **PHP + Bootstrap**.
 - Kein NPM/Vite-Zwang für normale Seiten.
-- Lokale Vendor-Assets bleiben unter `public/vendor`.
+- Lokale Vendor-Assets bleiben unter `vendor`.
 
 ## Mini-Checkliste vor JavaScript
 
@@ -59,5 +59,5 @@ Vor zusätzlichem JavaScript kurz prüfen:
 
 ## Aktueller Projekt-Setup-Hinweis
 
-- Bootstrap lokal: `public/vendor/bootstrap`
-- Projekt-Assets: `public/assets`
+- Bootstrap lokal: `vendor/bootstrap`
+- Projekt-Assets: `assets`
