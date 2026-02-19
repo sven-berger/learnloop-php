@@ -1,6 +1,1 @@
 .DS_Store
-/node_modules
-
-vite.config.js
-package-lock.json
-package.json
