@@ -14,7 +14,7 @@ declare(strict_types=1);
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body class="bg-light-subtle">
+<body>
     <header class="border-bottom bg-white p-4">
         <div class="container">
             <h1 class="h6 mb-0">LearnLoop</h1>
