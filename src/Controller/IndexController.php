@@ -2,17 +2,43 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../Modell/SkillModel.php';
+require_once __DIR__ . '/../View/ViewRenderer.php';
 
 class IndexController
 {
+    /**
+     * Homepage rendert
+     */
     public function index(): string
     {
-        $model = new SkillModel();
-        $skills = $model->all();
+        return renderPage('home', [
+            'title' => 'Willkommen bei LearnLoop',
+            'greeting' => 'Entdecke ein PHP-Projekt mit wiederverwendbaren Komponenten!'
+        ]);
+    }
 
-        ob_start();
-        require __DIR__ . '/../View/layout.php';
-        return (string) ob_get_clean();
+    /**
+     * Gästebuch-Seite rendert
+     */
+    public function guestbook(): string
+    {
+        // Mock-Daten (später aus Datenbank)
+        $guestbookEntries = [
+            [
+                'author' => 'Besucher 1',
+                'date' => '19.02.2026',
+                'message' => 'Tolle Seite mit gut strukturiertem Code!'
+            ],
+            [
+                'author' => 'Besucher 2',
+                'date' => '18.02.2026',
+                'message' => 'Das Komponenten-System ist sehr praktisch.'
+            ],
+        ];
+
+        return renderPage('guestbook', [
+            'guestbookEntries' => $guestbookEntries,
+            'message' => 'Vielen Dank für deinen Eintrag!'
+        ]);
     }
 }

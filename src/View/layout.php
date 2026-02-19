@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
-$skillsJson = htmlspecialchars((string) json_encode($skills, JSON_UNESCAPED_UNICODE), ENT_QUOTES, 'UTF-8');
 ?>
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -15,15 +14,26 @@ $skillsJson = htmlspecialchars((string) json_encode($skills, JSON_UNESCAPED_UNIC
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body>
-    <main class="container py-4">
-        <h1 class="display-6 text-danger mb-4">Meine Skills</h1>
-        <div id="app" data-skills="<?= $skillsJson ?>"></div>
+<body class="bg-light-subtle">
+    <header class="border-bottom bg-white p-4">
+        <div class="container">
+            <h1 class="h6 mb-0">LearnLoop</h1>
+        </div>
+    </header>
+
+    <main class="m-4">
+        <div class="row g-4">
+            <aside class="col-12 col-lg-3 ps-0">
+                <?php require __DIR__ . '/sidebar.php'; ?>
+            </aside>
+
+            <!-- Content Area: wird von Views gefüllt -->
+            <article class="col-12 col-lg-9">
+                <?php echo $content ?? '<p class="text-muted">Keine Inhalte verfügbar.</p>'; ?>
+            </article>
+        </div>
     </main>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/vendor/react/react.development.js"></script>
-    <script src="/vendor/react/react-dom.development.js"></script>
-    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
